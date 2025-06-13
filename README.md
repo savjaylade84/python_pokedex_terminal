@@ -14,6 +14,8 @@ Information provided <br>
 - List of Abilities
 - List of Moves
 
+To Run The Program: <br>
+`pyvenv/bin/python3 pokedex.py`
 
 Author: John Jayson B. De Leon<br>
 Github: [savjaylade84](github.com/savjaylade84) <br>

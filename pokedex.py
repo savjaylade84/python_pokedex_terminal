@@ -3,7 +3,6 @@
 import requests
 import json
 
-
 def runStats(response) -> None:
     pokedex = response.json()
     
@@ -15,12 +14,12 @@ def runStats(response) -> None:
     
     print("="*30)
     
-    print(f"NAME: {pokedex['name']}".upper())
-    print(f"SPECIES: {pokedex['species']['name']}".upper())
+    print('NAME: ' + f"{pokedex['name']}".capitalize())
+    print('SPECIES: ' + f"{pokedex['species']['name']}".capitalize())
 
     print("TYPES: ")
     for ptype in pokedex['types']:
-        print(f"- {ptype['type']['name']}".upper())
+        print(f"{ptype['type']['name']}".capitalize())
 
     print("="*30)
     
@@ -30,12 +29,16 @@ def runStats(response) -> None:
     print("="*30)
     print("ABILITIES:")
     for ability in pokedex['abilities']:
-        print(f"- {ability['ability']['name']}".upper())
+        print(f"{ability['ability']['name']} ".capitalize())
 
     print("="*30)
     print("MOVES:")
+    count = 0
     for move in pokedex['moves']:
-        print(f"- {move['move']['name']}".upper())
+        if count > 10:
+            break
+        print(f"{move['move']['name']} ".capitalize())
+        count += 1
 
 
 print("="*30)
