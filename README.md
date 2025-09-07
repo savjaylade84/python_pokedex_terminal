@@ -1,4 +1,4 @@
-## Pokemon Database Terminal
+## Pokemon Information Terminal
 ### A terminal based  app using pokedex api and python
 
 Information provided <br>
